@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <title>Matcha</title>
+  <style>
+    .ri-bubble-chart-fill {
+      color: palevioletred;
+      font-size: 25px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">Matcha<i class="ri-bubble-chart-fill"></i></div>
+    <ul class="navbar">
+      <li class="link"><a href="index.html">Home</a></li>
+      <li class="link"><a href="shop.html">Shop</a></li>
+      <li class="link"><a href="blog.html">Blog</a></li>
+      <li class="link"><a href="story.html">Our Story</a></li>
+      <li class="link"><a href="contactus.html">Contact Us</a></li>
+    </ul>
+  </nav>
+  <header>
+
+    <div class="content">
+      <div>
+        <h1>Matcha</h1>
+        <p class="subtitle">
+          is meant to be enjoyed with <br>
+          anything from all beverages to baking goods... <br>
+          <br>
+          originated from Japan, organic high <br>
+          ceremonial grade... for you to enjoy SoMatcha
+          in any way!
+          <br>
+          <br>
+          <button class="btn"><a href="signin.html">Sign in</a></button>
+          <button class="btn"><a href="signup.html">Sign up</a></button>
+        </p>
+      </div>
+    </div>
+
+  </header>
+  <h2 class="title ">
+    Group Members <i class="ri-group-line"></i>
+  </h2>
+  <div class="grid" id="group-members">
+    <div class="card"
+      style="display: flex; flex-direction: column; border-top: 30px solid pink; border-radius: 1px; text-align: center;">
+      <div class="information-student">
+        <p>Wasn Al-shamrani <br>
+          CS | student <br>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci recusandae libero rem ducimus, minus
+          similique, tempore dolorem odio officia asperiores et tenetur laudantium quos enim temporibus exercitationem
+          quo voluptatum error!</p>
+      </div>
+    </div>
+    <div class="card"
+      style="display: flex; flex-direction: column; border-top: 30px solid pink; border-radius: 1px; text-align: center;">
+      <div class="information-student">
+        <p>Hadeel Al-mubarki<br>
+          CS | student <br>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci recusandae libero rem ducimus, minus
+          similique, tempore dolorem odio officia asperiores et tenetur laudantium quos enim temporibus exercitationem
+          quo voluptatum error!</p>
+      </div>
+    </div>
+    <div class="card"
+      style="display: flex; flex-direction: column; border-top: 30px solid pink; border-radius: 1px; text-align: center;">
+      <div class="information-student">
+        <p>Fay Al-sharari <br>
+          CS | student <br>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci recusandae libero rem ducimus, minus
+          similique, tempore dolorem odio officia asperiores et tenetur laudantium quos enim temporibus exercitationem
+          quo voluptatum error!</p>
+
+      </div>
+    </div>
+  </div>
+
+  </br>
+
+
+
+</body>
+<script>
+  const groupMembersContainer = document.getElementById("group-members");
+
+  const cards = groupMembersContainer.getElementsByClassName("card");
+
+  const cardsArray = Array.from(cards);
+
+  const shuffledCards = [];
+
+  for (let i = 0; i < cardsArray.length; i++) {
+    const randomIndex = Math.floor(Math.random() * (i + 1));
+    shuffledCards[i] = shuffledCards[randomIndex];
+    shuffledCards[randomIndex] = cardsArray[i];
+  }
+
+  groupMembersContainer.innerHTML = "";
+
+  for (let i = 0; i < shuffledCards.length; i++) {
+    groupMembersContainer.appendChild(shuffledCards[i]);
+  }
+</script>
+
+</html>

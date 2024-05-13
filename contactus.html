@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Matcha</title>
+    <style>
+        video {
+            width: 70%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">Matcha<i class="ri-bubble-chart-fill"></i></div>
+        <ul class="navbar">
+            <li class="link"><a href="index.html">Home</a></li>
+            <li class="link"><a href="shop.html">Shop</a></li>
+            <li class="link"><a href="blog.html">Blog</a></li>
+            <li class="link"><a href="story.html">Our Story</a></li>
+            <li class="link"><a href="contactus.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <section class="gallary" style="margin:150px 60px">
+
+        <h2 class="story-title" style="align-items: left; color: green;">
+            Contact Us
+            <div class="line"></div>
+        </h2>
+        <p class="story-subtitle">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        </p>
+        <form id="myForm">
+            <input type="text" id="nameInput" placeholder="Enter Your Name:" required><br>
+            <input type="email" id="emailInput" placeholder="Enter Your Email:" required><br>
+            <textarea id="messageInput" placeholder="Enter Message:" required></textarea><br>
+            <br>
+            <button type="submit" class="shop-now">Send</button>
+        </form>
+
+
+
+    </section>
+</body>
+<script>
+    function validateEmail(email) {
+        const emailRegex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+        return emailRegex.test(email);
+    }
+
+    function validateForm(event) {
+        event.preventDefault(); 
+        const nameInput = document.getElementById("nameInput");
+        const emailInput = document.getElementById("emailInput");
+        const messageInput = document.getElementById("messageInput");
+
+        const email = emailInput.value;
+        if (!validateEmail(email)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+        nameInput.value = "";
+        emailInput.value = "";
+        messageInput.value = "";
+    }
+    const myForm = document.getElementById("myForm");
+    myForm.addEventListener("submit", validateForm);
+</script>
+
+</html>

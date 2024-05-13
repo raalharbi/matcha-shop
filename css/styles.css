@@ -1,0 +1,277 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  
+  }
+  
+  html {
+    overflow-x: hidden;
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  
+  }
+  
+  img {
+    width: 100%;
+    display: block;
+  }
+  
+  .ri-bubble-chart-fill {
+    color: palevioletred;
+    font-size: 25px;
+  }
+  
+  nav {
+    padding: 16px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 192, 203, 0.628);
+  
+  }
+  
+  .logo {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(4, 85, 4);
+  }
+  
+  .navbar {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  .link a {
+    padding: 0 12px;
+    color: rgb(0, 87, 0);
+    font-size: 16px;
+    font-weight: 700;
+  
+  }
+  
+  .link a:hover {
+    color: palevioletred;
+  }
+  
+  .content {
+    text-align: center;
+    margin-top: 200px;
+  
+  }
+  
+  .content h1 {
+    font-size: 46px;
+    font-weight: 800;
+    color: palevioletred;
+  }
+  
+  
+  .subtitle {
+    margin-bottom: 50px;
+    color: rgb(2, 88, 2);
+    font-size: 25px;
+    text-align: center;
+  
+  }
+  
+  .btn {
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    color: white;
+    background-color: palevioletred;
+    border-radius: 40px;
+  }
+  
+  .btn:hover {
+    background-color: rgb(214, 83, 127);
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  
+  .card {
+    overflow: hidden;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .title {
+    font-size: 28px;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: rgb(3, 48, 3);
+  }
+  
+  .information-student,
+  .product-details {
+    display: grid;
+    gap: 12px;
+    font-size: 16px;
+    color: black;
+  }
+  
+  .shop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+  }
+  
+  .price span {
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: rgb(28, 28, 28);
+  }
+  
+  .shop-now {
+    padding: 5px 10px;
+    color: white;
+    border: none;
+    border-radius: 24px;
+    background-color: palevioletred;
+  }
+  
+  .container,
+  .gallary-container {
+    margin: auto;
+    padding: 28px 16px;
+  }
+  
+  .gallary-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .image-gallary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .gallary-col {
+    display: grid;
+    place-content: center;
+    gap: 1rem;
+  }
+  
+  .gallary-col img {
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .gallary-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .story-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: palevioletred;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  .gallary-content div .story-title .line {
+    width: 100px;
+    height: 5px;
+    border-radius: 20px;
+    background-color: rgb(18, 88, 18);
+    margin-top: 4px;
+  }
+  
+  .story-subtitle {
+    margin-bottom: 30px;
+    color: palevioletred;
+    text-align: left;
+  }
+  
+  input,
+  textarea {
+    width: 70%;
+    height: 30px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid palevioletred;
+  }
+  
+  textarea {
+    height: 150px;
+  }
+  
+  input:hover,
+  textarea:hover {
+    border-bottom: 2px solid green;
+  }
+  @media (width < 1200px) {
+    .card {
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    #img-blog{
+      width: 130px;
+    }
+  
+   
+    nav {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+    }
+  
+  }
+  
+  @media (width < 900px) {
+    nav {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    input,
+    textarea {
+      width: 100%;
+      height: 30px;
+      margin: 10px 0;
+  
+    }
+  }
+  
+  @media (width < 600px) {
+  
+    input,
+    textarea {
+      width: 100%;
+      height: 30px;
+      margin: 10px 0;
+  
+    }
+  
+    .grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .gallary-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
